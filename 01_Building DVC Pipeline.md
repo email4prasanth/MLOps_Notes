@@ -33,9 +33,22 @@ pip show scikit-learn
 ```sh
 src/data_collection.py (this will create data/raw folder) delete it later
 cd ..
+# dvc stage add -n <stage-name> -d <dependecy location> -o <output location> python <exeutable py file>
+# dvc stage add -n <stage-name> -d deps -o outs cmd
 dvc stage add -n data_collection -d  src/data_collection.py -o data/raw python src/data_collection.py
 ```
 - To execute the stage of dvc.yaml file
 ```sh
 dvc repro (this will create data and raw folder)
+dvc dag (vizualise the pipeline stages)
+```
+
+## Stage-2 Data Preparation.
+- To develop code
+    - Fetch the data form raw folder
+    - fill the missing values
+    - data, processed
+    - train_processed.csv and test_processed.csv
+```sh
+dvc stage add -n pre_processing -d src/data_preprocessing.py -d data/raw -o data/processed python src/data_preprocessing.py
 ```
