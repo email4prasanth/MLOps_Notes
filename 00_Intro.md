@@ -14,8 +14,7 @@ flowchart TD
     style D fill:#ffb,stroke:#333,stroke-width:2px
     style E fill:#fbb,stroke:#333,stroke-width:2px
     style F fill:#ccc,stroke:#333,stroke-width:2px
-
-
+```
 - ML Pipelines contain following stages
     1. Data Collection/ Data Injestion
     2. Data Preparation
