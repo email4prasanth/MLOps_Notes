@@ -1,11 +1,18 @@
 # Software Development Life Cycle (SDLC)
 ```mermaid
 graph TD
-    A[Requirement Gathering] --> B[System Design]
-    B --> C[Implementation]
-    C --> D[Testing]
-    D --> E[Deployment]
-    E --> F[Maintenance]
+    A[Requirement Gathering]
+    B[System Design]
+    C[Implementation]
+    D[Testing]
+    E[Deployment]
+    F[Maintenance]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
     F --> A
 
     style A fill:#000,stroke:#fff,stroke-width:2px,color:#fff,font-weight:bold
@@ -15,8 +22,8 @@ graph TD
     style E fill:#000,stroke:#fff,stroke-width:2px,color:#fff,font-weight:bold
     style F fill:#000,stroke:#fff,stroke-width:2px,color:#fff,font-weight:bold
 
-    classDef circular display: flex, justify-content: center, align-items: center
-    class A,B,C,D,E,F circular
+    %% Positioning hints to suggest circular arrangement
+    A --- B --- C --- D --- E --- F --- A
 ```
 - ML Pipelines contain following stages
     1. Data Collection/ Data Injestion
