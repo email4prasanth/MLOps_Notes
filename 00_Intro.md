@@ -8,12 +8,12 @@ flowchart TD
     E --> F[Maintenance]
     F --> A
 
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style C fill:#bfb,stroke:#333,stroke-width:2px
-    style D fill:#ffb,stroke:#333,stroke-width:2px
-    style E fill:#fbb,stroke:#333,stroke-width:2px
-    style F fill:#ccc,stroke:#333,stroke-width:2px
+    style A fill:#000,stroke:#fff,stroke-width:2px,color:#fff,font-weight:bold
+    style B fill:#000,stroke:#fff,stroke-width:2px,color:#fff,font-weight:bold
+    style C fill:#000,stroke:#fff,stroke-width:2px,color:#fff,font-weight:bold
+    style D fill:#000,stroke:#fff,stroke-width:2px,color:#fff,font-weight:bold
+    style E fill:#000,stroke:#fff,stroke-width:2px,color:#fff,font-weight:bold
+    style F fill:#000,stroke:#fff,stroke-width:2px,color:#fff,font-weight:bold
 ```
 - ML Pipelines contain following stages
     1. Data Collection/ Data Injestion
