@@ -15,11 +15,6 @@ flowchart TD
     style E fill:#000,stroke:#fff,stroke-width:2px,color:#fff,font-weight:bold
     style F fill:#000,stroke:#fff,stroke-width:2px,color:#fff,font-weight:bold
 
-    %% Subgraph to enforce rectangular layout
-    subgraph SDLC
-        direction TB
-        A --> B --> C --> D --> E --> F --> A
-    end
 ```
 - ML Pipelines contain following stages
     1. Data Collection/ Data Injestion
