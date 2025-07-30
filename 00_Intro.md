@@ -1,16 +1,19 @@
 # Software Development Life Cycle (SDLC)
 ```mermaid
-# Software Development Life Cycle (SDLC)
-
-```mermaid
 flowchart TD
-    A["**Requirement Gathering**"] --> B["**System Design**"]
-    B --> C["**Implementation**"]
-    C --> D["**Testing**"]
-    D --> E["**Deployment**"]
-    E --> F["**Maintenance**"]
+    A[Requirement Gathering] --> B[System Design]
+    B --> C[Implementation]
+    C --> D[Testing]
+    D --> E[Deployment]
+    E --> F[Maintenance]
     F --> A
 
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bfb,stroke:#333,stroke-width:2px
+    style D fill:#ffb,stroke:#333,stroke-width:2px
+    style E fill:#fbb,stroke:#333,stroke-width:2px
+    style F fill:#ccc,stroke:#333,stroke-width:2px
 ```
 - ML Pipelines contain following stages
     1. Data Collection/ Data Injestion
