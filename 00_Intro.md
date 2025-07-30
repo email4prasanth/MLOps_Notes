@@ -1,5 +1,15 @@
+# Software Development Life Cycle (SDLC)
+
+Requirement Gathering ⟶  
+System Design ⟶  
+Implementation ⟶  
+Testing ⟶  
+Deployment ⟶  
+Maintenance ⟶  
+🔁 Back to Requirement Gathering
+
 - ML Pipelines contain following stages
-    1. Data Collection
+    1. Data Collection/ Data Injestion
     2. Data Preparation
     3. Feature Extraction
     4. Model Building
