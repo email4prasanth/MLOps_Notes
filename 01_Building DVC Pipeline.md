@@ -3,6 +3,7 @@
 - Use ps are VScode terminal, create src folder and init
 ```sh
 mkdir src
+echo "# data collection" > .\src\data_collection.py
 git init
 pip install dvc
 pip show dvc
@@ -35,7 +36,7 @@ src/data_collection.py (this will create data/raw folder) delete it later
 cd ..
 # dvc stage add -n <stage-name> -d <dependecy location> -o <output location> python <exeutable py file>
 # dvc stage add -n <stage-name> -d deps -o outs cmd
-dvc stage add -n data_collection -d  src/data_collection.py -o data/raw python src/data_collection.py
+dvc stage add --force -n data_collection -d  src/data_collection.py -p data_collection.test_size-o data/raw python src/ data_collection.py
 ```
 - To execute the stage of dvc.yaml file
 ```sh
@@ -82,3 +83,23 @@ dvc repro
 dvc dag
 dvc metrics show
 ```
+
+## To remove dvc stage
+```sh
+dvc remove model_evaluation 
+```
+
+### syntax
+dvc stage add -force -n data_collection -d .\src\data_collection.py -d params.yml -o .\data\raw\ python .src\data_collection.py
+
+dvc stage add --force -n data_process -d .\src\data_processing.py -d .\data\raw -o .\data\processed python .\src\data_processing.py
+
+dvc stage add --force -n model_bulid -d .\src\model_building.py -d .\data\processed\ -d params.yaml -o model.pkl python .\src\model_building.py
+
+dvc stage add -n model_evaluation -d .\src\model_ev.py -d model.pkl --metrics metrics.json python .\src\model_ev.py
+
+# overview
+1. Data Collection: Data_collect, read_params, split_data(train, test), store raw data
+2. Data Processing: Clean raw data, add median value, store process data (train, test)
+3. Model Training: Use processed training data, prepare data (x_train, y_train), read_params, train model, store model
+4. Model Evaluation: Use processed test data seperate y_test, from model calculate y_predict, calculate metrics.
