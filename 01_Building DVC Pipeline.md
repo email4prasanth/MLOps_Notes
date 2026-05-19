@@ -36,7 +36,7 @@ src/data_collection.py (this will create data/raw folder) delete it later
 cd ..
 # dvc stage add -n <stage-name> -d <dependecy location> -o <output location> python <exeutable py file>
 # dvc stage add -n <stage-name> -d deps -o outs cmd
-dvc stage add --force -n data_collection -d  src/data_collection.py -p data_collection.test_size-o data/raw python src/ data_collection.py
+dvc stage add --force -n data_collection -d  src/data_collection.py -p data_collection.test_size -o data/raw python .\src\data_collection.py
 ```
 - To execute the stage of dvc.yaml file
 ```sh
